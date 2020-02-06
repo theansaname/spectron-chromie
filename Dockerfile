@@ -22,6 +22,7 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 COPY wrap_chrome_binary /opt/bin/wrap_chrome_binary
+RUN chmod +x /opt/bin/wrap_chrome_binary
 RUN /opt/bin/wrap_chrome_binary
 
 RUN google-chrome --version
